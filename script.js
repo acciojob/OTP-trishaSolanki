@@ -7,7 +7,7 @@ inputs.forEach((input, index) =>{
 		const currentInputIndex = Array.from(inputs).indexOf(currentInput);
 		if(currentInputIndex >= maxLength){
 			if(currentInputIndex < inputs.length - 1){
-				 inputs[currentInputIndex + 1].focus();
+				 inputs[currentInputIndex - 1].focus();
 			}
 		}
 	});
@@ -17,7 +17,7 @@ inputs.forEach((input, index) =>{
 			const currentInputIndex = Array.from(inputs).indexOf(currentInput);
 			
 		if (currentInput.value.length === 0 && currentInputIndex > 0) {
-            inputs[currentInputIndex - 1].focus();
+            inputs[currentInputIndex + 1].focus();
           }
         
 		}
