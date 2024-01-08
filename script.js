@@ -8,7 +8,7 @@ const inputs = document.querySelectorAll('.code');
         const currentInputIndex = Array.from(inputs).indexOf(currentInput);
 
         if (currentInput.value.length >= maxLength) {
-          if (currentInputIndex < inputs.length - 1) {
+          if (currentInputIndex < inputs.length + 1) {
             inputs[currentInputIndex + 1].focus();
           }
         }
