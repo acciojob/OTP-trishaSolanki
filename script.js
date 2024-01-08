@@ -15,7 +15,7 @@ const inputs = document.querySelectorAll('.code');
       });
 
       input.addEventListener('keydown', (event) => {
-        if (event.key === 'Backspace') {
+        if (event.key === 'Backspace' || event.key ==="Delete") {
           const currentInput = event.target;
           const currentInputIndex = Array.from(inputs).indexOf(currentInput);
 
