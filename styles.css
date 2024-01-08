@@ -42,7 +42,7 @@
 	border-radius:5px;
 	margin-top:50px;
 }
-.code : input:focus{
+.code :focus{
 	 border-bottom: 3px solid orange;
     outline: none;
 }

@@ -1,27 +1,21 @@
 //your JS code here. If required.
-const inputs = document.querySelectorAll('.code');
+     const codeInput = document.querySelectoreAll('.code');
 
-    inputs.forEach((input, index) => {
-      input.addEventListener('input', (event) => {
-        const currentInput = event.target;
-        const maxLength = parseInt(currentInput.getAttribute('maxlength'));
-        const currentInputIndex = Array.from(inputs).indexOf(currentInput);
-
-        if (currentInput.value.length >= maxLength) {
-          if (currentInputIndex < inputs.length + 1) {
-            inputs[currentInputIndex + 1].focus();
-          }
-        }
-      });
-
-      input.addEventListener('keydown', (event) => {
-        if (event.key === 'Backspace' || event.key ==="Delete") {
-          const currentInput = event.target;
-          const currentInputIndex = Array.from(inputs).indexOf(currentInput);
-
-          if (currentInput.value.length === 0 && currentInputIndex > 0) {
-            inputs[currentInputIndex - 1].focus();
-          }
-        }
-      });
-    });
+codeInput.forEach((input, i) =>{
+	if(i > 0){
+		input.addEventListener('focuse', () =>{
+			codeInput[i - 1].focuse();
+		});
+	}
+	input.addEventListener(('input',()) =>{
+		if(input.value){
+			let nextInput = codeInput[i + 1];
+			if(nextInput){
+				nextInput.focuse();
+			}else{
+				input.blur();
+			}
+		}
+	});
+});
+codeInput[0].focuse();
